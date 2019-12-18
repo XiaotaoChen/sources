@@ -1,0 +1,551 @@
+measure[BatchNorm]: i(1 3 224 224) cost(0.0238)
+measure[BatchNorm]: i(1 64 112 112) cost(0.0237)
+measure[BatchNorm]: i(1 64 56 56) cost(0.0056)
+measure[BatchNorm]: i(1 128 28 28) cost(0.0047)
+measure[BatchNorm]: i(1 256 14 14) cost(0.0048)
+measure[BatchNorm]: i(1 512 7 7) cost(0.0044)
+Found unsupported ONNX operator: Flatten (Skipped)
+ original_cost = 2.1733014583587646
+[added by cxt] xfers.size():8
+        cost[Conv2D]: i(1 3 224 224) w(64 3 7 7) s(2 2) p(0) cost(0.1412) total_cost(0.1649)
+        cost[Activation]: mode(8) cost(0.0220) total_cost(0.2106)
+        cost[Pool2D]: i(1 64 112 112) k(3 3) s(2 2) cost(0.0227) total_cost(0.2333)
+        cost[Activation]: mode(8) cost(0.0058) total_cost(0.2447)
+        cost[Conv2D]: i(1 64 56 56) w(64 64 3 3) s(1 1) p(0) cost(0.0787) total_cost(0.3234)
+        cost[Conv2D]: i(1 64 56 56) w(64 64 1 1) s(1 1) p(0) cost(0.0225) total_cost(0.3459)
+        cost[Activation]: mode(8) cost(0.0058) total_cost(0.3573)
+        cost[Conv2D]: i(1 64 56 56) w(64 64 3 3) s(1 1) p(0) cost(0.0787) total_cost(0.4360)
+        cost[Element]: cost(0.0186) total_cost(0.4546)
+        cost[Activation]: mode(8) cost(0.0058) total_cost(0.4660)
+        cost[Conv2D]: i(1 64 56 56) w(64 64 3 3) s(1 1) p(0) cost(0.0787) total_cost(0.5447)
+        cost[Activation]: mode(8) cost(0.0058) total_cost(0.5561)
+        cost[Conv2D]: i(1 64 56 56) w(64 64 3 3) s(1 1) p(0) cost(0.0787) total_cost(0.6348)
+        cost[Element]: cost(0.0186) total_cost(0.6535)
+        cost[Activation]: mode(8) cost(0.0058) total_cost(0.6648)
+        cost[Conv2D]: i(1 64 56 56) w(128 64 3 3) s(2 2) p(0) cost(0.0712) total_cost(0.7360)
+        cost[Conv2D]: i(1 64 56 56) w(128 64 1 1) s(2 2) p(0) cost(0.0201) total_cost(0.7561)
+        cost[Activation]: mode(8) cost(0.0059) total_cost(0.7667)
+        cost[Conv2D]: i(1 128 28 28) w(128 128 3 3) s(1 1) p(0) cost(0.0408) total_cost(0.8075)
+        cost[Element]: cost(0.0068) total_cost(0.8142)
+        cost[Activation]: mode(8) cost(0.0059) total_cost(0.8248)
+        cost[Conv2D]: i(1 128 28 28) w(128 128 3 3) s(1 1) p(0) cost(0.0408) total_cost(0.8655)
+        cost[Activation]: mode(8) cost(0.0059) total_cost(0.8761)
+        cost[Conv2D]: i(1 128 28 28) w(128 128 3 3) s(1 1) p(0) cost(0.0408) total_cost(0.9169)
+        cost[Element]: cost(0.0068) total_cost(0.9236)
+        cost[Activation]: mode(8) cost(0.0059) total_cost(0.9342)
+        cost[Conv2D]: i(1 128 28 28) w(256 128 3 3) s(2 2) p(0) cost(0.1270) total_cost(1.0612)
+        cost[Conv2D]: i(1 128 28 28) w(256 128 1 1) s(2 2) p(0) cost(0.0276) total_cost(1.0888)
+        cost[Activation]: mode(8) cost(0.0057) total_cost(1.0993)
+        cost[Conv2D]: i(1 256 14 14) w(256 256 3 3) s(1 1) p(0) cost(0.0603) total_cost(1.1596)
+        cost[Element]: cost(0.0058) total_cost(1.1654)
+        cost[Activation]: mode(8) cost(0.0057) total_cost(1.1759)
+        cost[Conv2D]: i(1 256 14 14) w(256 256 3 3) s(1 1) p(0) cost(0.0603) total_cost(1.2362)
+        cost[Activation]: mode(8) cost(0.0057) total_cost(1.2467)
+        cost[Conv2D]: i(1 256 14 14) w(256 256 3 3) s(1 1) p(0) cost(0.0603) total_cost(1.3070)
+        cost[Element]: cost(0.0058) total_cost(1.3128)
+        cost[Activation]: mode(8) cost(0.0057) total_cost(1.3233)
+        cost[Conv2D]: i(1 256 14 14) w(512 256 3 3) s(2 2) p(0) cost(0.2796) total_cost(1.6029)
+        cost[Conv2D]: i(1 256 14 14) w(512 256 1 1) s(2 2) p(0) cost(0.0434) total_cost(1.6463)
+        cost[Activation]: mode(8) cost(0.0062) total_cost(1.6569)
+        cost[Conv2D]: i(1 512 7 7) w(512 512 3 3) s(1 1) p(0) cost(0.1547) total_cost(1.8115)
+        cost[Element]: cost(0.0104) total_cost(1.8219)
+        cost[Activation]: mode(8) cost(0.0062) total_cost(1.8325)
+        cost[Conv2D]: i(1 512 7 7) w(512 512 3 3) s(1 1) p(0) cost(0.1547) total_cost(1.9871)
+        cost[Activation]: mode(8) cost(0.0062) total_cost(1.9977)
+        cost[Conv2D]: i(1 512 7 7) w(512 512 3 3) s(1 1) p(0) cost(0.1547) total_cost(2.1523)
+        cost[Element]: cost(0.0104) total_cost(2.1627)
+        cost[Activation]: mode(8) cost(0.0062) total_cost(2.1733)
+        Cost metrics: exe_time(2.1733) flops(6.8212) memory_access(276.3037) kernel_launches(67)
+
+        ===== Start Cost-Based Backtracking Search =====
+        [0] cost = 2.1733 bestCost = 2.1733 candidates.size() = 0
+        [1] cost = 2.1496 bestCost = 2.1496 candidates.size() = 8
+        [2] cost = 2.0293 bestCost = 2.0293 candidates.size() = 16
+        [3] cost = 2.0237 bestCost = 2.0237 candidates.size() = 23
+        [4] cost = 2.0038 bestCost = 2.0038 candidates.size() = 30
+        [5] cost = 1.9982 bestCost = 1.9982 candidates.size() = 36
+        [6] cost = 1.9782 bestCost = 1.9782 candidates.size() = 42
+        [7] cost = 1.9735 bestCost = 1.9735 candidates.size() = 47
+        [8] cost = 1.9538 bestCost = 1.9538 candidates.size() = 52
+        [9] cost = 1.9490 bestCost = 1.9490 candidates.size() = 56
+        [10] cost = 1.9369 bestCost = 1.9369 candidates.size() = 60
+        [11] cost = 1.9322 bestCost = 1.9322 candidates.size() = 63
+        [12] cost = 1.9187 bestCost = 1.9187 candidates.size() = 66
+        [13] cost = 1.9140 bestCost = 1.9140 candidates.size() = 68
+        [14] cost = 1.8978 bestCost = 1.8978 candidates.size() = 70
+        [15] cost = 1.8934 bestCost = 1.8934 candidates.size() = 71
+        [16] cost = 1.8651 bestCost = 1.8651 candidates.size() = 72
+        [17] cost = 1.8607 bestCost = 1.8607 candidates.size() = 72
+        [18] cost = 1.8485 bestCost = 1.8485 candidates.size() = 72
+        [19] cost = 1.8890 bestCost = 1.8485 candidates.size() = 71
+        [20] cost = 1.8768 bestCost = 1.8485 candidates.size() = 71
+        [21] cost = 1.8934 bestCost = 1.8485 candidates.size() = 70
+        [22] cost = 1.8812 bestCost = 1.8485 candidates.size() = 70
+        [23] cost = 1.9096 bestCost = 1.8485 candidates.size() = 69
+        [24] cost = 1.8813 bestCost = 1.8485 candidates.size() = 70
+        [25] cost = 1.8769 bestCost = 1.8485 candidates.size() = 70
+        [26] cost = 1.8647 bestCost = 1.8485 candidates.size() = 70
+        [27] cost = 1.9052 bestCost = 1.8485 candidates.size() = 69
+        [28] cost = 1.8930 bestCost = 1.8485 candidates.size() = 69
+        [29] cost = 1.9096 bestCost = 1.8485 candidates.size() = 68
+        [30] cost = 1.8973 bestCost = 1.8485 candidates.size() = 68
+        [31] cost = 1.9143 bestCost = 1.8485 candidates.size() = 67
+        [32] cost = 1.9020 bestCost = 1.8485 candidates.size() = 68
+        [33] cost = 1.8977 bestCost = 1.8485 candidates.size() = 68
+        [34] cost = 1.8694 bestCost = 1.8485 candidates.size() = 68
+        [35] cost = 1.9099 bestCost = 1.8485 candidates.size() = 67
+        [36] cost = 1.8816 bestCost = 1.8485 candidates.size() = 67
+        [37] cost = 1.9143 bestCost = 1.8485 candidates.size() = 66
+        [38] cost = 1.8860 bestCost = 1.8485 candidates.size() = 66
+        [39] cost = 1.9275 bestCost = 1.8485 candidates.size() = 65
+        [40] cost = 1.9114 bestCost = 1.8485 candidates.size() = 67
+        [41] cost = 1.9070 bestCost = 1.8485 candidates.size() = 68
+        [42] cost = 1.8787 bestCost = 1.8485 candidates.size() = 69
+        [43] cost = 1.8743 bestCost = 1.8485 candidates.size() = 69
+        [44] cost = 1.8621 bestCost = 1.8485 candidates.size() = 69
+        [45] cost = 1.9026 bestCost = 1.8485 candidates.size() = 68
+        [46] cost = 1.8904 bestCost = 1.8485 candidates.size() = 68
+        [47] cost = 1.9070 bestCost = 1.8485 candidates.size() = 67
+        [48] cost = 1.8948 bestCost = 1.8485 candidates.size() = 67
+        [49] cost = 1.9231 bestCost = 1.8485 candidates.size() = 66
+        [50] cost = 1.8948 bestCost = 1.8485 candidates.size() = 67
+        [51] cost = 1.8905 bestCost = 1.8485 candidates.size() = 67
+        [52] cost = 1.8782 bestCost = 1.8485 candidates.size() = 67
+        [53] cost = 1.9188 bestCost = 1.8485 candidates.size() = 66
+        [54] cost = 1.9065 bestCost = 1.8485 candidates.size() = 66
+        [55] cost = 1.9231 bestCost = 1.8485 candidates.size() = 65
+        [56] cost = 1.9109 bestCost = 1.8485 candidates.size() = 65
+        [57] cost = 1.9278 bestCost = 1.8485 candidates.size() = 64
+        [58] cost = 1.9156 bestCost = 1.8485 candidates.size() = 65
+        [59] cost = 1.9112 bestCost = 1.8485 candidates.size() = 65
+        [60] cost = 1.8829 bestCost = 1.8485 candidates.size() = 65
+        [61] cost = 1.9235 bestCost = 1.8485 candidates.size() = 64
+        [62] cost = 1.8952 bestCost = 1.8485 candidates.size() = 64
+        [63] cost = 1.9278 bestCost = 1.8485 candidates.size() = 63
+        [64] cost = 1.8996 bestCost = 1.8485 candidates.size() = 63
+        [65] cost = 1.9322 bestCost = 1.8485 candidates.size() = 62
+        [66] cost = 1.9161 bestCost = 1.8485 candidates.size() = 64
+        [67] cost = 1.9117 bestCost = 1.8485 candidates.size() = 65
+        [68] cost = 1.8834 bestCost = 1.8485 candidates.size() = 66
+        [69] cost = 1.8790 bestCost = 1.8485 candidates.size() = 66
+        [70] cost = 1.8668 bestCost = 1.8485 candidates.size() = 66
+        [71] cost = 1.9073 bestCost = 1.8485 candidates.size() = 65
+        [72] cost = 1.8951 bestCost = 1.8485 candidates.size() = 65
+        [73] cost = 1.9117 bestCost = 1.8485 candidates.size() = 64
+        [74] cost = 1.8995 bestCost = 1.8485 candidates.size() = 64
+        [75] cost = 1.9278 bestCost = 1.8485 candidates.size() = 63
+        [76] cost = 1.8996 bestCost = 1.8485 candidates.size() = 64
+        [77] cost = 1.8952 bestCost = 1.8485 candidates.size() = 64
+        [78] cost = 1.8829 bestCost = 1.8485 candidates.size() = 64
+        [79] cost = 1.9235 bestCost = 1.8485 candidates.size() = 63
+        [80] cost = 1.9112 bestCost = 1.8485 candidates.size() = 63
+        [81] cost = 1.9278 bestCost = 1.8485 candidates.size() = 62
+        [82] cost = 1.9156 bestCost = 1.8485 candidates.size() = 62
+        [83] cost = 1.9325 bestCost = 1.8485 candidates.size() = 61
+        [84] cost = 1.9203 bestCost = 1.8485 candidates.size() = 62
+        [85] cost = 1.9159 bestCost = 1.8485 candidates.size() = 62
+        [86] cost = 1.8876 bestCost = 1.8485 candidates.size() = 62
+        [87] cost = 1.9282 bestCost = 1.8485 candidates.size() = 61
+        [88] cost = 1.8999 bestCost = 1.8485 candidates.size() = 61
+        [89] cost = 1.9325 bestCost = 1.8485 candidates.size() = 60
+        [90] cost = 1.9043 bestCost = 1.8485 candidates.size() = 60
+        [91] cost = 1.9443 bestCost = 1.8485 candidates.size() = 59
+        [92] cost = 1.9282 bestCost = 1.8485 candidates.size() = 62
+        [93] cost = 1.9235 bestCost = 1.8485 candidates.size() = 64
+        [94] cost = 1.9099 bestCost = 1.8485 candidates.size() = 66
+        [95] cost = 1.9055 bestCost = 1.8485 candidates.size() = 67
+        [96] cost = 1.8772 bestCost = 1.8485 candidates.size() = 68
+        [97] cost = 1.8728 bestCost = 1.8485 candidates.size() = 68
+        [98] cost = 1.8606 bestCost = 1.8485 candidates.size() = 68
+        [99] cost = 1.9011 bestCost = 1.8485 candidates.size() = 67
+        [100] cost = 1.8889 bestCost = 1.8485 candidates.size() = 67
+        [101] cost = 1.9055 bestCost = 1.8485 candidates.size() = 66
+        [102] cost = 1.8933 bestCost = 1.8485 candidates.size() = 66
+        [103] cost = 1.9191 bestCost = 1.8485 candidates.size() = 65
+        [104] cost = 1.8908 bestCost = 1.8485 candidates.size() = 66
+        [105] cost = 1.8864 bestCost = 1.8485 candidates.size() = 66
+        [106] cost = 1.8742 bestCost = 1.8485 candidates.size() = 66
+        [107] cost = 1.9147 bestCost = 1.8485 candidates.size() = 65
+        [108] cost = 1.9025 bestCost = 1.8485 candidates.size() = 65
+        [109] cost = 1.9191 bestCost = 1.8485 candidates.size() = 64
+        [110] cost = 1.9068 bestCost = 1.8485 candidates.size() = 64
+        [111] cost = 1.9238 bestCost = 1.8485 candidates.size() = 63
+        [112] cost = 1.8955 bestCost = 1.8485 candidates.size() = 64
+        [113] cost = 1.8911 bestCost = 1.8485 candidates.size() = 64
+        [114] cost = 1.8789 bestCost = 1.8485 candidates.size() = 64
+        [115] cost = 1.9194 bestCost = 1.8485 candidates.size() = 63
+        [116] cost = 1.9072 bestCost = 1.8485 candidates.size() = 63
+        [117] cost = 1.9238 bestCost = 1.8485 candidates.size() = 62
+        [118] cost = 1.9115 bestCost = 1.8485 candidates.size() = 62
+        [119] cost = 1.9396 bestCost = 1.8485 candidates.size() = 61
+        [120] cost = 1.9260 bestCost = 1.8485 candidates.size() = 63
+        [121] cost = 1.9217 bestCost = 1.8485 candidates.size() = 64
+        [122] cost = 1.8934 bestCost = 1.8485 candidates.size() = 65
+        [123] cost = 1.8890 bestCost = 1.8485 candidates.size() = 65
+        [124] cost = 1.8768 bestCost = 1.8485 candidates.size() = 65
+        [125] cost = 1.9173 bestCost = 1.8485 candidates.size() = 64
+        [126] cost = 1.9051 bestCost = 1.8485 candidates.size() = 64
+        [127] cost = 1.9217 bestCost = 1.8485 candidates.size() = 63
+        [128] cost = 1.9094 bestCost = 1.8485 candidates.size() = 63
+        [129] cost = 1.9352 bestCost = 1.8485 candidates.size() = 62
+        [130] cost = 1.9069 bestCost = 1.8485 candidates.size() = 63
+        [131] cost = 1.9026 bestCost = 1.8485 candidates.size() = 63
+        [132] cost = 1.8903 bestCost = 1.8485 candidates.size() = 63
+        [133] cost = 1.9308 bestCost = 1.8485 candidates.size() = 62
+        [134] cost = 1.9186 bestCost = 1.8485 candidates.size() = 62
+        [135] cost = 1.9352 bestCost = 1.8485 candidates.size() = 61
+        [136] cost = 1.9230 bestCost = 1.8485 candidates.size() = 61
+        [137] cost = 1.9399 bestCost = 1.8485 candidates.size() = 60
+        [138] cost = 1.9277 bestCost = 1.8485 candidates.size() = 61
+        [139] cost = 1.9233 bestCost = 1.8485 candidates.size() = 61
+        [140] cost = 1.8950 bestCost = 1.8485 candidates.size() = 61
+        [141] cost = 1.9356 bestCost = 1.8485 candidates.size() = 60
+        [142] cost = 1.9073 bestCost = 1.8485 candidates.size() = 60
+        [143] cost = 1.9399 bestCost = 1.8485 candidates.size() = 59
+        [144] cost = 1.9116 bestCost = 1.8485 candidates.size() = 59
+        [145] cost = 1.9443 bestCost = 1.8485 candidates.size() = 58
+        [146] cost = 1.9308 bestCost = 1.8485 candidates.size() = 60
+        [147] cost = 1.9264 bestCost = 1.8485 candidates.size() = 61
+        [148] cost = 1.9141 bestCost = 1.8485 candidates.size() = 62
+        [149] cost = 1.9098 bestCost = 1.8485 candidates.size() = 62
+        [150] cost = 1.8815 bestCost = 1.8485 candidates.size() = 62
+        [151] cost = 1.9220 bestCost = 1.8485 candidates.size() = 61
+        [152] cost = 1.8937 bestCost = 1.8485 candidates.size() = 61
+        [153] cost = 1.9264 bestCost = 1.8485 candidates.size() = 60
+        [154] cost = 1.8981 bestCost = 1.8485 candidates.size() = 60
+        [155] cost = 1.9399 bestCost = 1.8485 candidates.size() = 59
+        [156] cost = 1.9277 bestCost = 1.8485 candidates.size() = 60
+        [157] cost = 1.9233 bestCost = 1.8485 candidates.size() = 60
+        [158] cost = 1.8950 bestCost = 1.8485 candidates.size() = 60
+        [159] cost = 1.9356 bestCost = 1.8485 candidates.size() = 59
+        [160] cost = 1.9073 bestCost = 1.8485 candidates.size() = 59
+        [161] cost = 1.9399 bestCost = 1.8485 candidates.size() = 58
+        [162] cost = 1.9116 bestCost = 1.8485 candidates.size() = 58
+        [163] cost = 1.9446 bestCost = 1.8485 candidates.size() = 57
+        [164] cost = 1.9324 bestCost = 1.8485 candidates.size() = 58
+        [165] cost = 1.9280 bestCost = 1.8485 candidates.size() = 58
+        [166] cost = 1.8997 bestCost = 1.8485 candidates.size() = 58
+        [167] cost = 1.9403 bestCost = 1.8485 candidates.size() = 57
+        [168] cost = 1.9120 bestCost = 1.8485 candidates.size() = 57
+        [169] cost = 1.9446 bestCost = 1.8485 candidates.size() = 56
+        [170] cost = 1.9164 bestCost = 1.8485 candidates.size() = 56
+        [171] cost = 1.9491 bestCost = 1.8485 candidates.size() = 55
+        [172] cost = 1.9355 bestCost = 1.8485 candidates.size() = 55
+        [173] cost = 1.9308 bestCost = 1.8485 candidates.size() = 57
+        [174] cost = 1.9147 bestCost = 1.8485 candidates.size() = 59
+        [175] cost = 1.9103 bestCost = 1.8485 candidates.size() = 60
+        [176] cost = 1.8980 bestCost = 1.8485 candidates.size() = 61
+        [177] cost = 1.8937 bestCost = 1.8485 candidates.size() = 61
+        [178] cost = 1.8654 bestCost = 1.8485 candidates.size() = 61
+        [179] cost = 1.9059 bestCost = 1.8485 candidates.size() = 60
+        [180] cost = 1.8776 bestCost = 1.8485 candidates.size() = 60
+        [181] cost = 1.9103 bestCost = 1.8485 candidates.size() = 59
+        [182] cost = 1.8820 bestCost = 1.8485 candidates.size() = 59
+        [183] cost = 1.9264 bestCost = 1.8485 candidates.size() = 58
+        [184] cost = 1.9142 bestCost = 1.8485 candidates.size() = 59
+        [185] cost = 1.9098 bestCost = 1.8485 candidates.size() = 59
+        [186] cost = 1.8815 bestCost = 1.8485 candidates.size() = 59
+        [187] cost = 1.9220 bestCost = 1.8485 candidates.size() = 58
+        [188] cost = 1.8938 bestCost = 1.8485 candidates.size() = 58
+        [189] cost = 1.9264 bestCost = 1.8485 candidates.size() = 57
+        [190] cost = 1.8981 bestCost = 1.8485 candidates.size() = 57
+        [191] cost = 1.9311 bestCost = 1.8485 candidates.size() = 56
+        [192] cost = 1.9189 bestCost = 1.8485 candidates.size() = 57
+        [193] cost = 1.9145 bestCost = 1.8485 candidates.size() = 57
+        [194] cost = 1.8862 bestCost = 1.8485 candidates.size() = 57
+        [195] cost = 1.9268 bestCost = 1.8485 candidates.size() = 56
+        [196] cost = 1.8985 bestCost = 1.8485 candidates.size() = 56
+        [197] cost = 1.9311 bestCost = 1.8485 candidates.size() = 55
+        [198] cost = 1.9028 bestCost = 1.8485 candidates.size() = 55
+        [199] cost = 1.9491 bestCost = 1.8485 candidates.size() = 54
+        [200] cost = 1.9329 bestCost = 1.8485 candidates.size() = 54
+        [201] cost = 1.9282 bestCost = 1.8485 candidates.size() = 56
+        [202] cost = 1.9238 bestCost = 1.8485 candidates.size() = 57
+        [203] cost = 1.9116 bestCost = 1.8485 candidates.size() = 58
+        [204] cost = 1.9072 bestCost = 1.8485 candidates.size() = 58
+        [205] cost = 1.8789 bestCost = 1.8485 candidates.size() = 58
+        [206] cost = 1.9195 bestCost = 1.8485 candidates.size() = 57
+        [207] cost = 1.8912 bestCost = 1.8485 candidates.size() = 57
+        [208] cost = 1.9238 bestCost = 1.8485 candidates.size() = 56
+        [209] cost = 1.8955 bestCost = 1.8485 candidates.size() = 56
+        [210] cost = 1.9285 bestCost = 1.8485 candidates.size() = 55
+        [211] cost = 1.9163 bestCost = 1.8485 candidates.size() = 56
+        [212] cost = 1.9119 bestCost = 1.8485 candidates.size() = 56
+        [213] cost = 1.8836 bestCost = 1.8485 candidates.size() = 56
+        [214] cost = 1.9242 bestCost = 1.8485 candidates.size() = 55
+        [215] cost = 1.8959 bestCost = 1.8485 candidates.size() = 55
+        [216] cost = 1.9285 bestCost = 1.8485 candidates.size() = 54
+        [217] cost = 1.9003 bestCost = 1.8485 candidates.size() = 54
+        [218] cost = 1.9494 bestCost = 1.8485 candidates.size() = 53
+        [219] cost = 1.9372 bestCost = 1.8485 candidates.size() = 53
+        [220] cost = 1.9325 bestCost = 1.8485 candidates.size() = 55
+        [221] cost = 1.9278 bestCost = 1.8485 candidates.size() = 56
+        [222] cost = 1.9234 bestCost = 1.8485 candidates.size() = 56
+        [223] cost = 1.8951 bestCost = 1.8485 candidates.size() = 56
+        [224] cost = 1.9281 bestCost = 1.8485 candidates.size() = 55
+        [225] cost = 1.8998 bestCost = 1.8485 candidates.size() = 55
+        [226] cost = 1.9325 bestCost = 1.8485 candidates.size() = 54
+        [227] cost = 1.9281 bestCost = 1.8485 candidates.size() = 54
+        [228] cost = 1.8998 bestCost = 1.8485 candidates.size() = 54
+        [229] cost = 1.9328 bestCost = 1.8485 candidates.size() = 53
+        [230] cost = 1.9045 bestCost = 1.8485 candidates.size() = 53
+        [231] cost = 1.9494 bestCost = 1.8485 candidates.size() = 52
+        [232] cost = 1.9211 bestCost = 1.8485 candidates.size() = 52
+        [233] cost = 1.9164 bestCost = 1.8485 candidates.size() = 54
+        [234] cost = 1.9117 bestCost = 1.8485 candidates.size() = 55
+        [235] cost = 1.9073 bestCost = 1.8485 candidates.size() = 55
+        [236] cost = 1.9120 bestCost = 1.8485 candidates.size() = 54
+        [237] cost = 1.9164 bestCost = 1.8485 candidates.size() = 53
+        [238] cost = 1.9120 bestCost = 1.8485 candidates.size() = 53
+        [239] cost = 1.9167 bestCost = 1.8485 candidates.size() = 52
+        [240] cost = 1.9687 bestCost = 1.8485 candidates.size() = 51
+        [241] cost = 1.9688 bestCost = 1.8485 candidates.size() = 50
+        [242] cost = 1.9688 bestCost = 1.8485 candidates.size() = 49
+        [243] cost = 1.9691 bestCost = 1.8485 candidates.size() = 48
+        [244] cost = 1.9691 bestCost = 1.8485 candidates.size() = 47
+        [245] cost = 1.9408 bestCost = 1.8485 candidates.size() = 47
+        [246] cost = 1.9360 bestCost = 1.8485 candidates.size() = 50
+        [247] cost = 1.9239 bestCost = 1.8485 candidates.size() = 53
+        [248] cost = 1.9192 bestCost = 1.8485 candidates.size() = 55
+        [249] cost = 1.9057 bestCost = 1.8485 candidates.size() = 57
+        [250] cost = 1.9010 bestCost = 1.8485 candidates.size() = 58
+        [251] cost = 1.8848 bestCost = 1.8485 candidates.size() = 59
+        [252] cost = 1.8804 bestCost = 1.8485 candidates.size() = 59
+        [253] cost = 1.8682 bestCost = 1.8485 candidates.size() = 59
+        [254] cost = 1.8966 bestCost = 1.8485 candidates.size() = 58
+        [255] cost = 1.8844 bestCost = 1.8485 candidates.size() = 58
+        [256] cost = 1.9013 bestCost = 1.8485 candidates.size() = 57
+        [257] cost = 1.8891 bestCost = 1.8485 candidates.size() = 57
+        [258] cost = 1.9145 bestCost = 1.8485 candidates.size() = 56
+        [259] cost = 1.8984 bestCost = 1.8485 candidates.size() = 57
+        [260] cost = 1.8940 bestCost = 1.8485 candidates.size() = 57
+        [261] cost = 1.8818 bestCost = 1.8485 candidates.size() = 57
+        [262] cost = 1.9101 bestCost = 1.8485 candidates.size() = 56
+        [263] cost = 1.8979 bestCost = 1.8485 candidates.size() = 56
+        [264] cost = 1.9148 bestCost = 1.8485 candidates.size() = 55
+        [265] cost = 1.9026 bestCost = 1.8485 candidates.size() = 55
+        [266] cost = 1.9192 bestCost = 1.8485 candidates.size() = 54
+        [267] cost = 1.9031 bestCost = 1.8485 candidates.size() = 55
+        [268] cost = 1.8987 bestCost = 1.8485 candidates.size() = 55
+        [269] cost = 1.8865 bestCost = 1.8485 candidates.size() = 55
+        [270] cost = 1.9148 bestCost = 1.8485 candidates.size() = 54
+        [271] cost = 1.9026 bestCost = 1.8485 candidates.size() = 54
+        [272] cost = 1.9196 bestCost = 1.8485 candidates.size() = 53
+        [273] cost = 1.9073 bestCost = 1.8485 candidates.size() = 53
+        [274] cost = 1.9313 bestCost = 1.8485 candidates.size() = 52
+        [275] cost = 1.9178 bestCost = 1.8485 candidates.size() = 54
+        [276] cost = 1.9131 bestCost = 1.8485 candidates.size() = 55
+        [277] cost = 1.8969 bestCost = 1.8485 candidates.size() = 56
+        [278] cost = 1.8925 bestCost = 1.8485 candidates.size() = 56
+        [279] cost = 1.8803 bestCost = 1.8485 candidates.size() = 56
+        [280] cost = 1.9087 bestCost = 1.8485 candidates.size() = 55
+        [281] cost = 1.8965 bestCost = 1.8485 candidates.size() = 55
+        [282] cost = 1.9134 bestCost = 1.8485 candidates.size() = 54
+        [283] cost = 1.9012 bestCost = 1.8485 candidates.size() = 54
+        [284] cost = 1.9266 bestCost = 1.8485 candidates.size() = 53
+        [285] cost = 1.9105 bestCost = 1.8485 candidates.size() = 54
+        [286] cost = 1.9061 bestCost = 1.8485 candidates.size() = 54
+        [287] cost = 1.8939 bestCost = 1.8485 candidates.size() = 54
+        [288] cost = 1.9222 bestCost = 1.8485 candidates.size() = 53
+        [289] cost = 1.9100 bestCost = 1.8485 candidates.size() = 53
+        [290] cost = 1.9269 bestCost = 1.8485 candidates.size() = 52
+        [291] cost = 1.9147 bestCost = 1.8485 candidates.size() = 52
+        [292] cost = 1.9313 bestCost = 1.8485 candidates.size() = 51
+        [293] cost = 1.9152 bestCost = 1.8485 candidates.size() = 52
+        [294] cost = 1.9108 bestCost = 1.8485 candidates.size() = 52
+        [295] cost = 1.8986 bestCost = 1.8485 candidates.size() = 52
+        [296] cost = 1.9269 bestCost = 1.8485 candidates.size() = 51
+        [297] cost = 1.9147 bestCost = 1.8485 candidates.size() = 51
+        [298] cost = 1.9316 bestCost = 1.8485 candidates.size() = 50
+        [299] cost = 1.9194 bestCost = 1.8485 candidates.size() = 50
+        [300] cost = 1.9361 bestCost = 1.8485 candidates.size() = 49
+        [301] cost = 1.9225 bestCost = 1.8485 candidates.size() = 51
+        [302] cost = 1.9178 bestCost = 1.8485 candidates.size() = 52
+        [303] cost = 1.9017 bestCost = 1.8485 candidates.size() = 53
+        [304] cost = 1.8973 bestCost = 1.8485 candidates.size() = 53
+        [305] cost = 1.8851 bestCost = 1.8485 candidates.size() = 53
+        [306] cost = 1.9134 bestCost = 1.8485 candidates.size() = 52
+        [307] cost = 1.9012 bestCost = 1.8485 candidates.size() = 52
+        [308] cost = 1.9181 bestCost = 1.8485 candidates.size() = 51
+        [309] cost = 1.9059 bestCost = 1.8485 candidates.size() = 51
+        [310] cost = 1.9314 bestCost = 1.8485 candidates.size() = 50
+        [311] cost = 1.9152 bestCost = 1.8485 candidates.size() = 51
+        [312] cost = 1.9108 bestCost = 1.8485 candidates.size() = 51
+        [313] cost = 1.8986 bestCost = 1.8485 candidates.size() = 51
+        [314] cost = 1.9270 bestCost = 1.8485 candidates.size() = 50
+        [315] cost = 1.9148 bestCost = 1.8485 candidates.size() = 50
+        [316] cost = 1.9317 bestCost = 1.8485 candidates.size() = 49
+        [317] cost = 1.9195 bestCost = 1.8485 candidates.size() = 49
+        [318] cost = 1.9361 bestCost = 1.8485 candidates.size() = 48
+        [319] cost = 1.9199 bestCost = 1.8485 candidates.size() = 49
+        [320] cost = 1.9155 bestCost = 1.8485 candidates.size() = 49
+        [321] cost = 1.9033 bestCost = 1.8485 candidates.size() = 49
+        [322] cost = 1.9317 bestCost = 1.8485 candidates.size() = 48
+        [323] cost = 1.9195 bestCost = 1.8485 candidates.size() = 48
+        [324] cost = 1.9364 bestCost = 1.8485 candidates.size() = 47
+        [325] cost = 1.9242 bestCost = 1.8485 candidates.size() = 47
+        [326] cost = 1.9735 bestCost = 1.8485 candidates.size() = 46
+        [327] cost = 1.9735 bestCost = 1.8485 candidates.size() = 45
+        [328] cost = 1.9735 bestCost = 1.8485 candidates.size() = 44
+        [329] cost = 1.9739 bestCost = 1.8485 candidates.size() = 43
+        [330] cost = 1.9739 bestCost = 1.8485 candidates.size() = 42
+        [331] cost = 1.9934 bestCost = 1.8485 candidates.size() = 41
+        [332] cost = 1.9934 bestCost = 1.8485 candidates.size() = 40
+        [333] cost = 1.9935 bestCost = 1.8485 candidates.size() = 39
+        [334] cost = 1.9935 bestCost = 1.8485 candidates.size() = 38
+        [335] cost = 1.9938 bestCost = 1.8485 candidates.size() = 37
+        [336] cost = 1.9938 bestCost = 1.8485 candidates.size() = 36
+        [337] cost = 1.9990 bestCost = 1.8485 candidates.size() = 35
+        [338] cost = 1.9990 bestCost = 1.8485 candidates.size() = 34
+        [339] cost = 1.9991 bestCost = 1.8485 candidates.size() = 33
+        [340] cost = 1.9991 bestCost = 1.8485 candidates.size() = 32
+        [341] cost = 1.9994 bestCost = 1.8485 candidates.size() = 31
+        [342] cost = 1.9994 bestCost = 1.8485 candidates.size() = 30
+        [343] cost = 2.0181 bestCost = 1.8485 candidates.size() = 29
+        [344] cost = 2.0189 bestCost = 1.8485 candidates.size() = 28
+        [345] cost = 2.0189 bestCost = 1.8485 candidates.size() = 27
+        [346] cost = 2.0190 bestCost = 1.8485 candidates.size() = 26
+        [347] cost = 2.0190 bestCost = 1.8485 candidates.size() = 25
+        [348] cost = 2.0193 bestCost = 1.8485 candidates.size() = 24
+        [349] cost = 2.0193 bestCost = 1.8485 candidates.size() = 23
+        [350] cost = 2.0237 bestCost = 1.8485 candidates.size() = 22
+        [351] cost = 2.0245 bestCost = 1.8485 candidates.size() = 21
+        [352] cost = 2.0245 bestCost = 1.8485 candidates.size() = 20
+        [353] cost = 2.0246 bestCost = 1.8485 candidates.size() = 19
+        [354] cost = 2.0246 bestCost = 1.8485 candidates.size() = 18
+        [355] cost = 2.0249 bestCost = 1.8485 candidates.size() = 17
+        [356] cost = 2.0249 bestCost = 1.8485 candidates.size() = 16
+        [357] cost = 2.1440 bestCost = 1.8485 candidates.size() = 15
+        [358] cost = 2.1440 bestCost = 1.8485 candidates.size() = 14
+        [359] cost = 2.1448 bestCost = 1.8485 candidates.size() = 13
+        [360] cost = 2.1448 bestCost = 1.8485 candidates.size() = 12
+        [361] cost = 2.1449 bestCost = 1.8485 candidates.size() = 11
+        [362] cost = 2.1449 bestCost = 1.8485 candidates.size() = 10
+        [363] cost = 2.1452 bestCost = 1.8485 candidates.size() = 9
+        [364] cost = 2.1452 bestCost = 1.8485 candidates.size() = 8
+        [365] cost = 2.1677 bestCost = 1.8485 candidates.size() = 7
+        [366] cost = 2.1677 bestCost = 1.8485 candidates.size() = 6
+        [367] cost = 2.1685 bestCost = 1.8485 candidates.size() = 5
+        [368] cost = 2.1685 bestCost = 1.8485 candidates.size() = 4
+        [369] cost = 2.1686 bestCost = 1.8485 candidates.size() = 3
+        [370] cost = 2.1686 bestCost = 1.8485 candidates.size() = 2
+        [371] cost = 2.1689 bestCost = 1.8485 candidates.size() = 1
+        [372] cost = 2.1689 bestCost = 1.8485 candidates.size() = 0
+        ===== Finish Cost-Based Backtracking Search =====
+
+        cost[Pool2D]: i(1 64 112 112) k(3 3) s(2 2) cost(0.0227) total_cost(0.0465)
+        cost[Activation]: mode(8) cost(0.0058) total_cost(0.0579)
+        cost[Conv2D]: i(1 64 56 56) w(64 64 1 1) s(1 1) p(0) cost(0.0225) total_cost(0.0803)
+        cost[Conv2D]: i(1 64 56 56) w(64 64 3 3) s(1 1) p(0) cost(0.0787) total_cost(0.1590)
+        cost[Element]: cost(0.0186) total_cost(0.1777)
+        cost[Activation]: mode(8) cost(0.0058) total_cost(0.1890)
+        cost[Conv2D]: i(1 64 56 56) w(64 64 3 3) s(1 1) p(0) cost(0.0787) total_cost(0.2678)
+        cost[Element]: cost(0.0186) total_cost(0.2864)
+        cost[Activation]: mode(8) cost(0.0058) total_cost(0.2978)
+        cost[Conv2D]: i(1 64 56 56) w(128 64 1 1) s(2 2) p(0) cost(0.0201) total_cost(0.3179)
+        cost[Conv2D]: i(1 128 28 28) w(128 128 3 3) s(1 1) p(0) cost(0.0408) total_cost(0.3586)
+        cost[Element]: cost(0.0068) total_cost(0.3654)
+        cost[Activation]: mode(8) cost(0.0059) total_cost(0.3760)
+        cost[Conv2D]: i(1 128 28 28) w(128 128 3 3) s(1 1) p(0) cost(0.0408) total_cost(0.4167)
+        cost[Element]: cost(0.0068) total_cost(0.4235)
+        cost[Activation]: mode(8) cost(0.0059) total_cost(0.4340)
+        cost[Conv2D]: i(1 128 28 28) w(256 128 1 1) s(2 2) p(0) cost(0.0276) total_cost(0.4616)
+        cost[Conv2D]: i(1 256 14 14) w(256 256 3 3) s(1 1) p(0) cost(0.0603) total_cost(0.5219)
+        cost[Element]: cost(0.0058) total_cost(0.5277)
+        cost[Activation]: mode(8) cost(0.0057) total_cost(0.5382)
+        cost[Conv2D]: i(1 256 14 14) w(256 256 3 3) s(1 1) p(0) cost(0.0603) total_cost(0.5985)
+        cost[Element]: cost(0.0058) total_cost(0.6043)
+        cost[Activation]: mode(8) cost(0.0057) total_cost(0.6148)
+        cost[Conv2D]: i(1 256 14 14) w(512 256 1 1) s(2 2) p(0) cost(0.0434) total_cost(0.6582)
+        cost[Conv2D]: i(1 512 7 7) w(512 512 3 3) s(1 1) p(0) cost(0.1547) total_cost(0.8129)
+        cost[Element]: cost(0.0104) total_cost(0.8233)
+        cost[Activation]: mode(8) cost(0.0062) total_cost(0.8339)
+        cost[Conv2D]: i(1 512 7 7) w(512 512 3 3) s(1 1) p(0) cost(0.1547) total_cost(0.9885)
+        cost[Element]: cost(0.0104) total_cost(0.9989)
+        cost[Activation]: mode(8) cost(0.0062) total_cost(1.0095)
+        cost[Conv2D]: i(1 3 224 224) w(64 3 7 7) s(2 2) p(0) cost(0.0428) total_cost(1.0523)
+        cost[Conv2D]: i(1 64 56 56) w(64 64 3 3) s(1 1) p(0) cost(0.0646) total_cost(1.1169)
+        cost[Conv2D]: i(1 64 56 56) w(64 64 3 3) s(1 1) p(0) cost(0.0646) total_cost(1.1815)
+        cost[Conv2D]: i(1 128 28 28) w(256 128 3 3) s(2 2) p(0) cost(0.1131) total_cost(1.2946)
+        cost[Conv2D]: i(1 256 14 14) w(256 256 3 3) s(1 1) p(0) cost(0.0539) total_cost(1.3485)
+        cost[Conv2D]: i(1 128 28 28) w(128 128 3 3) s(1 1) p(0) cost(0.0331) total_cost(1.3815)
+        cost[Conv2D]: i(1 64 56 56) w(128 64 3 3) s(2 2) p(0) cost(0.0609) total_cost(1.4424)
+        cost[Conv2D]: i(1 256 14 14) w(512 256 3 3) s(2 2) p(0) cost(0.2575) total_cost(1.6999)
+        cost[Conv2D]: i(1 512 7 7) w(512 512 3 3) s(1 1) p(0) cost(0.1486) total_cost(1.8485)
+        Cost metrics: exe_time(1.8485) flops(6.8241) memory_access(264.4365) kernel_launches(49)
+        ===== Applied Substitutions =====
+
+        substitution[000]: 
+            srcOp[0]: Conv_199
+            srcOp[1]: Batchnorm_200
+            dstOp[0]: Conv_271
+        substitution[001]: 
+            srcOp[0]: Conv_271
+            srcOp[1]: Relu_201
+            dstOp[0]: Conv_280
+        substitution[002]: 
+            srcOp[0]: Conv_206
+            srcOp[1]: Batchnorm_208
+            dstOp[0]: Conv_284
+        substitution[003]: 
+            srcOp[0]: Conv_284
+            srcOp[1]: Relu_209
+            dstOp[0]: Conv_292
+        substitution[004]: 
+            srcOp[0]: Conv_214
+            srcOp[1]: Batchnorm_215
+            dstOp[0]: Conv_300
+        substitution[005]: 
+            srcOp[0]: Conv_300
+            srcOp[1]: Relu_216
+            dstOp[0]: Conv_307
+        substitution[006]: 
+            srcOp[0]: Conv_236
+            srcOp[1]: Batchnorm_238
+            dstOp[0]: Conv_318
+        substitution[007]: 
+            srcOp[0]: Conv_318
+            srcOp[1]: Relu_239
+            dstOp[0]: Conv_323
+        substitution[008]: 
+            srcOp[0]: Conv_244
+            srcOp[1]: Batchnorm_245
+            dstOp[0]: Conv_327
+        substitution[009]: 
+            srcOp[0]: Conv_327
+            srcOp[1]: Relu_246
+            dstOp[0]: Conv_331
+        substitution[010]: 
+            srcOp[0]: Conv_229
+            srcOp[1]: Batchnorm_230
+            dstOp[0]: Conv_336
+        substitution[011]: 
+            srcOp[0]: Conv_336
+            srcOp[1]: Relu_231
+            dstOp[0]: Conv_340
+        substitution[012]: 
+            srcOp[0]: Conv_221
+            srcOp[1]: Batchnorm_223
+            dstOp[0]: Conv_345
+        substitution[013]: 
+            srcOp[0]: Conv_345
+            srcOp[1]: Relu_224
+            dstOp[0]: Conv_348
+        substitution[014]: 
+            srcOp[0]: Conv_251
+            srcOp[1]: Batchnorm_253
+            dstOp[0]: Conv_351
+        substitution[015]: 
+            srcOp[0]: Conv_351
+            srcOp[1]: Relu_254
+            dstOp[0]: Conv_353
+        substitution[016]: 
+            srcOp[0]: Conv_259
+            srcOp[1]: Batchnorm_260
+            dstOp[0]: Conv_354
+        substitution[017]: 
+            srcOp[0]: Conv_354
+            srcOp[1]: Relu_261
+            dstOp[0]: Conv_355
+optimized_cost = 1.8485121726989746
+
